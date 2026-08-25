@@ -27,7 +27,7 @@ FACEBOOK: https://www.facebook.com/themefisher
     <!-- Basic Page Needs
 ================================================== -->
     <meta charset="utf-8">
-    <title>Constra - Construction Html5 Template</title>
+    <title>@yield('title') | {{  env('APP_NAME')}} </title>
 
     <!-- Mobile Specific Metas
 ================================================== -->
@@ -59,6 +59,10 @@ FACEBOOK: https://www.facebook.com/themefisher
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/color-box.css') }}">
     <!-- Template styles-->
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/style.css ') }}">
+
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/custom.css ') }}">
+
+
 
 </head>
 

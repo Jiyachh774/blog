@@ -18,6 +18,7 @@ class Post extends Model
         'excerpt',
         'description',
         'status',
+        'type',
         'scheduled_at',
         'updated_at',
     ];
