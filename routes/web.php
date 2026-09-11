@@ -3,11 +3,16 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-
-
+Route::get('/', function () {
+    return view('frontend.home.index');
+});
 Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    return view('layouts.auth');
+})->middleware('auth');
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/', [App\Http\Controllers\Frontend\HomeController::class, 'index']);
 

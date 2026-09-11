@@ -28,19 +28,39 @@
             <div class="row justify-content-center">
                 <div class="col-md-6">
 
-                    <form action="{{ route('register') }}" method="post" role="form">
+                    <form action="{{ route('register') }}" method="post" enctype="multipart/form-data">
                         @csrf
 
                         <div class="error-container"></div>
 
                         <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Avatar</label>
+                                    <input type="file" class="form-control form-control-avatar" name="avatar" id="avatar" placeholder="add avatar file here">
+
+                                    @error('avatar')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" class="form-control form-control-name" name="name" id="name" placeholder="Type name here" required>
+                                    <label>First Name</label>
+                                    <input type="text" class="form-control form-control-name" name="first_name" id="first_name" placeholder="Type First Name here" required>
 
-                                    @error('name')
+                                    @error('first_name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Last Name</label>
+                                    <input type="text" class="form-control form-control-name" name="last_name" id="last_name" placeholder="Type Last Name here" required>
+
+                                    @error('last_name')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
@@ -52,6 +72,26 @@
                                     <input type="email" class="form-control form-control-email" name="email" id="email" placeholder="Type email here" required>
 
                                     @error('email')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input type="tel" class="form-control form-control-phone" name="phone" id="phone" placeholder="Type phone here">
+
+                                    @error('phone')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Address</label>
+                                    <input type="text" class="form-control form-control-address" name="address" id="address" placeholder="Type address here">
+
+                                    @error('address')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
