@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="zxx" class="js">
 
 <head>
@@ -1540,9 +1540,9 @@
         </div><!-- .modla-dialog -->
     </div><!-- .modal -->
     <!-- JavaScript -->
-    <script src="./assets/js/bundle.js?ver=3.2.3"></script>
-    <script src="./assets/js/scripts.js?ver=3.2.3"></script>
-    <script src="./assets/js/charts/chart-ecommerce.js?ver=3.2.3"></script>
+    <script src="{{ asset('assets/auth/js/bundle.js') }}"></script>
+    <script src="{{ asset('assets/auth/js/scripts.js') }}"></script>
+    <script src="{{ asset('assets/auth/js/charts/chart-ecommerce.js') }}"></script>
 </body>
 
-</html>
+</html> --}}
