@@ -42,7 +42,7 @@
     <link href="{{ asset('assets/backend/css/examples.css') }}" rel="stylesheet">
     <script src="{{ asset('assets/backend/js/config.js') }}"></script>
     <script src="{{ asset('assets/backend/js/color-modes.js') }}"></script>
-    <link href="{{ asset('assets/backend/vendors/@coreui/chartjs/css/coreui-chartjs.css') }}" rel="stylesheet">
+    @stack('styles')
   </head>
   <body>
 
@@ -69,9 +69,9 @@
       });
     </script>
     <!-- Plugins and scripts required by this view-->
-    <script src="{{ asset('assets/backend/vendors/chart.js/js/chart.umd.js') }}"></script>
-    <script src="{{ asset('assets/backend/vendors/@coreui/chartjs/js/coreui-chartjs.js') }}"></script>
+    @stack('chartsScripts')
     <script src="{{ asset('assets/backend/vendors/@coreui/utils/js/index.js') }}"></script>
     <script src="{{ asset('assets/backend/js/main.js') }}"></script>
+    @stack('scripts')
   </body>
 </html>
