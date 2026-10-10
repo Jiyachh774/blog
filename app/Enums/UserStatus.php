@@ -4,12 +4,12 @@ namespace App\Enums;
 
 enum UserStatus: string
 {
-    const Pending = 'pending';
-    const Invited = 'invited';
-    const EmailVerified = 'email_verified';
-    const Active = 'active';
-    const Inactive = 'inactive';
-    const Rejected = 'rejected';
+    case Pending = 'pending';
+    case Invited = 'invited';
+    case EmailVerified = 'email_verified';
+    case Active = 'active';
+    case Inactive = 'inactive';
+    case Rejected = 'rejected';
 
 
     public function label(): string

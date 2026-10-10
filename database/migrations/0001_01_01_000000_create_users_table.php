@@ -25,6 +25,7 @@ return new class extends Migration
             $table->text('bio')->nullable();
             $table->string('avatar')->nullable();
             $table->string('status')->default(UserStatus::Pending);
+            $table->boolean('is_super_admin')->default(false);
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
