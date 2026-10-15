@@ -11,3 +11,8 @@ function getUuid(int $length = 6): string
 {
     return bin2hex(random_bytes($length - 1));
 }
+
+function replaceUnderscores($name)
+{
+    return str_replace('_', ' ', $name);
+}

@@ -34,12 +34,12 @@
                     </x-slot>
 
                     <x-slot name="content">
-
-                        @if (auth()->user()->hasRole('admin'))
+                        <!-- Admin Dashboard -->
+                        @can('dashboard.view')
                             <x-dropdown-link :href="route('admin.dashboard')">
                                 {{ __('Admin Dashboard') }}
                             </x-dropdown-link>
-                        @endif
+                        @endcan
 
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
