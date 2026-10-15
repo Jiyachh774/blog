@@ -13,8 +13,7 @@ class DashboardController extends Controller implements HasMiddleware
     public static function middleware(): array
     {
         return [
-            new Middleware('role:admin', only: ['index']),
-
+            new Middleware('permission:dashboard.view', only: ['index']),
         ];
     }
 
